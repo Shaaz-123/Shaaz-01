@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore The World - Tourist App</title>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+  body {
+    background-color: #f5f6fa;
+    color: #333;
+  }
+
+  header {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0; left: 0;
+  }
+
+  header h1 {
+    z-index: 1;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  header p {
+    z-index: 1;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+
+  .btn {
+    z-index: 1;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #ffb400;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn:hover { background: #ff9800; }
+
+  section {
+    padding: 60px 10%;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #2f3640;
+  }
+
+  .places {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    background: white;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .card:hover { transform: scale(1.05); }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    margin: 15px;
+    color: #273c75;
+  }
+
+  .card p {
+    margin: 0 15px 20px;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    background: #273c75;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Explore The World</h1>
+  <p>Discover breathtaking destinations and unforgettable adventures</p>
+  <button class="btn" onclick="document.getElementById('places').scrollIntoView()">Start Exploring</button>
+</header>
+
+<section id="places">
+  <h2 class="section-title">Top Destinations 🌍</h2>
+  <div class="places">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80" alt="Paris">
+      <h3>Paris, France</h3>
+      <p>The city of lights — known for the Eiffel Tower, art museums, and amazing food.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80" alt="Bali">
+      <h3>Bali, Indonesia</h3>
+      <p>Enjoy tropical beaches, temples, and cultural beauty on this magical island.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="New York">
+      <h3>New York, USA</h3>
+      <p>The city that never sleeps — full of skyscrapers, art, and endless energy.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+      <h3>Tokyo, Japan</h3>
+      <p>Where modern technology meets ancient tradition — a truly unique experience.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>🌎 Made with ❤️ by Your Tourist App | © 2025 ExploreTheWorld</p>
+</footer>
+
+<script>
+  // Optional smooth scroll button animation or popup
+  document.querySelector('.btn').addEventListener('click', () => {
+    console.log("Exploring destinations...");
+  });
+</script>
+
+</body>
+</html>
